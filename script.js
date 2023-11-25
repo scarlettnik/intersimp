@@ -8,7 +8,7 @@ document.getElementById("submit").addEventListener("click", function () {
     text: text,
   };
 
-  fetch("https://kruase.serveo.net/api", {
+  fetch("https://krudora.pagekite.me/api", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -97,7 +97,7 @@ airplaneIcon.addEventListener("click", function () {
     const preloader = document.getElementById("preloader");
     preloader.style.display = "block";
     n.style.display = 'none';
-    fetch("https://kruase.serveo.net/file", {
+    fetch("https://krudora.pagekite.me/file", {
       method: "POST",
       body: formData,
     })
@@ -127,7 +127,7 @@ airplaneIcon.addEventListener("click", function () {
 });
 
 window.addEventListener('load', () => {
-  const url = 'https://kruase.serveo.net/history';
+  const url = 'https://krudora.pagekite.me/history';
   const options = {
     method: 'GET',
     headers: {
