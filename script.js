@@ -21,12 +21,10 @@ document.getElementById("submit").addEventListener("click", function () {
       if (response.ok) {
         return response.json();
       } else {
-        console.log(data);
         throw new Error("err");
       }
     })
     .then((data) => {
-      console.log(data);
       const containerA = document.getElementById("resultDiv");
       openModal();
 
@@ -44,17 +42,12 @@ document.getElementById("submit").addEventListener("click", function () {
         div.appendChild(topicGroup);
         div.appendChild(topic);
         div.appendChild(text);
-
-
         container.appendChild(div);
-
         text.classList.add("te");
         topic.classList.add("te");
         topicGroup.classList.add("te");
       }
       createDiv(data, containerA);
-
-
     })
     .catch((error) => {
       preloader.style.display = "none";
@@ -145,7 +138,6 @@ window.addEventListener('load', () => {
   fetch(url, options)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
       const a = document.getElementById("Лысьвенский городской округ");
       const les = data.filter(item => item.executor == a.id);
       const b = document.getElementById("Министерство социального развития ПК");
